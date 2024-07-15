@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Groceries</h1>
+    <ul>
+        {{range .}}
+            <li>{{.}}</li>
+        {{end}}
+    </ul>
+    <h3>with index</h3>
+       <p>the variable name is not important its the order of variables</p>
+      <ul>
+        {{range $index, $element := .}}
+            <li>Index: {{$index}} Element: {{$element}} Value: {{.}}</li>
+        {{end}}
+    </ul>
+
+     <h3>with element w/o index</h3>
+  
+      <ul>
+        {{range $element := .}}
+            <li> Element: {{$element}} Value: {{.}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>
